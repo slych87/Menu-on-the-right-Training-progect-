@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://kit.fontawesome.com/4328fa5759.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        .wrap,
+        nav,
+        header {
+            height: 360px;
+        }
+
+        nav {
+            float: left;
+            width: 300px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav a {
+            display: block;
+            line-height: 72px;
+            font-size: 22px;
+            color: black;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 5px 0 30px;
+        }
+
+
+        nav i {
+            width: 50px;
+            border-right: 2px solid black;
+            margin-right: 30px;
+            transition: .3s;
+        }
+
+        nav a:hover i {
+            margin-right: 50px;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        header {
+            float: left;
+            width: calc(100% - 300px);
+            background-color: aquamarine;
+            background-image: url(pianino.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-family: arial;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li><a href="#">
+                        <i class="far fa-play-circle">
+                        </i> start</a>
+                </li>
+
+                <li><a href="#">
+                        <i class="fas fa-shopping-cart">
+                        </i>oferta</a>
+                </li>
+
+                <li><a href="#">
+                        <i class="fas fa-rss">
+                        </i>blog</a>
+                </li>
+
+                <li><a href="#">
+                        <i class="far fa-calendar-alt">
+                        </i>terminarz</a></li>
+
+                <li><a href="#">
+                        <i class="far fa-envelope">
+                        </i>kontakt</a>
+                </li>
+            </ul>
+
+        </nav>
+        <header></header>
+    </div>
+    <section>
+        <h1>Welcome to our world</h1>
+    </section>
+</body>
+
+</html>

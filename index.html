@@ -20,12 +20,12 @@
         }
 
         .wrap,
-        nav,
+        nav.desktop,
         header {
             height: 360px;
         }
 
-        nav {
+        nav.desktop {
             float: left;
             width: 300px;
         }
@@ -34,7 +34,7 @@
             list-style: none;
         }
 
-        nav a {
+        nav.desktop a {
             display: block;
             line-height: 72px;
             font-size: 22px;
@@ -45,18 +45,18 @@
         }
 
 
-        nav i {
+        nav.desktop i {
             width: 50px;
             border-right: 2px solid black;
             margin-right: 30px;
             transition: .3s;
         }
 
-        nav a:hover i {
+        nav.desktop a:hover i {
             margin-right: 50px;
         }
 
-        nav a:hover {
+        nav.desktop a:hover {
             color: orange;
         }
 
@@ -81,12 +81,47 @@
             padding: 15px 0;
             text-align: center;
         }
+
+        nav.mobile {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            nav.mobile {
+                position: fixed;
+                display: block;
+                width: 72px;
+                height: 100%;
+                background-color: black;
+                color: white;
+            }
+
+            nav.mobile a {
+                display: block;
+                line-height: 10vh;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            nav.mobile a:hover {
+                color: yellow;
+            }
+
+            header {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap">
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><a href="#">
                         <i class="far fa-play-circle">
@@ -114,6 +149,35 @@
             </ul>
 
         </nav>
+        <nav class="mobile  ">
+            <ul>
+                <li><a href="#">
+                        <i class="far fa-play-circle">
+                        </i></a>
+                </li>
+
+                <li><a href="#">
+                        <i class="fas fa-shopping-cart">
+                        </i></a>
+                </li>
+
+                <li><a href="#">
+                        <i class="fas fa-rss">
+                        </i></a>
+                </li>
+
+                <li><a href="#">
+                        <i class="far fa-calendar-alt">
+                        </i></a></li>
+
+                <li><a href="#">
+                        <i class="far fa-envelope">
+                        </i></a>
+                </li>
+            </ul>
+
+        </nav>
+
         <header></header>
     </div>
     <section>
